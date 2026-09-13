@@ -1,0 +1,89 @@
+<!-- doctor/edit-profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <script src="../assets/js/fragments/head.js" type="module"></script>
+    <script src="../assets/js/fragments/preloader.js" type="module"></script>
+    <script src="../assets/js/fragments/doctor-header.js" type="module"></script>
+    <script src="../assets/js/fragments/footer.js" type="module"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <app-head data-page-title="Edit Profile"></app-head>
+    </head>
+    <body>
+        <app-preloader></app-preloader>
+        <app-header></app-header>
+
+
+  <section class="py-5">
+    <div class="container">
+      <div class="card shadow-sm mx-auto" style="max-width: 600px;">
+        <div class="card-body">
+          <h3 class="card-title text-center mb-4">Edit Profile</h3>
+          <form id="editProfileForm" novalidate>
+            <!-- حقول الإدخال -->
+            <div class="mb-3">
+              <label class="form-label">Username</label>
+              <input id="input-username" type="text" class="form-control" required />
+              <div class="invalid-feedback">Please enter a username.</div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input id="input-email" type="email" class="form-control" required />
+              <div class="invalid-feedback">Please enter a valid email.</div>
+            </div>
+
+            <div class="d-flex justify-content-center mt-4">
+              <button type="submit" class="btn btn-primary btn-lg">Save Changes</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+        <app-footer></app-footer>
+        <script src="../assets/js/api/utils.js" async></script>
+        <script src="../assets/js/api/doctor/edit-profile.js" async></script>
+        <!-- jquery Min JS -->
+        <script src="../assets/js/vendor/jquery.min.js"></script>
+        <!-- jquery Migrate JS -->
+        <script src="../assets/js/vendor/jquery-migrate-3.0.0.js"></script>
+        <!-- jquery Ui JS -->
+        <script src="../assets/js/vendor/jquery-ui.min.js"></script>
+        <!-- Easing JS -->
+        <script src="../assets/js/vendor/easing.js"></script>
+        <!-- Color JS -->
+        <script src="../assets/js/vendor/colors.js"></script>
+        <!-- Popper JS -->
+        <script src="../assets/js/vendor/popper.min.js"></script>
+        <!-- Bootstrap Datepicker JS -->
+        <script src="../assets/js/vendor/bootstrap-datepicker.js"></script>
+        <!-- Jquery Nav JS -->
+        <script src="../assets/js/vendor/jquery.nav.js"></script>
+        <!-- Slicknav JS -->
+        <script src="../assets/js/vendor/slicknav.min.js"></script>
+        <!-- ScrollUp JS -->
+        <script src="../assets/js/vendor/jquery.scrollUp.min.js"></script>
+        <!-- Niceselect JS -->
+        <script src="../assets/js/vendor/niceselect.js"></script>
+        <!-- Tilt Jquery JS -->
+        <script src="../assets/js/vendor/tilt.jquery.min.js"></script>
+        <!-- Owl Carousel JS -->
+        <script src="../assets/js/vendor/owl-carousel.js"></script>
+        <!-- counterup JS -->
+        <script src="../assets/js/vendor/jquery.counterup.min.js"></script>
+        <!-- Steller JS -->
+        <script src="../assets/js/vendor/steller.js"></script>
+        <!-- Wow JS -->
+        <script src="../assets/js/vendor/wow.min.js"></script>
+        <!-- Magnific Popup JS -->
+        <script src="../assets/js/vendor/jquery.magnific-popup.min.js"></script>
+        <!-- Counter Up CDN JS -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="../assets/js/vendor/bootstrap.min.js"></script>
+
+    </body>
+</html>

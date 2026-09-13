@@ -1,0 +1,51 @@
+<!-- doctor/schedule.html -->
+<!DOCTYPE html>
+<html class="no-js" lang="zxx" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/doctor :: head(pageTitle='Schedule')}"></head>
+<body>
+
+<div th:replace="~{fragments/doctor :: preloader}"></div>
+<div th:replace="~{fragments/doctor :: header(activePage='schedule')}"></div>
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <h3 class="mb-4">Your Availability</h3>
+    <div class="row">
+      <div class="col-lg-8">
+        <table class="table table-striped">
+          <thead><tr><th>Slot</th><th>Action</th></tr></thead>
+          <tbody>
+          <tr th:each="slot: ${slots}">
+            <td th:text="${#temporals.format(slot,'yyyy-MM-dd HH:mm')}">2025-05-20 10:00</td>
+            <td>
+              <form th:action="@{/doctor/schedule/block}" method="post" class="d-inline">
+                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+                <input type="hidden" name="datetime" th:value="${slot}" />
+                <button class="btn btn-sm btn-danger">Block</button>
+              </form>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-lg-4">
+        <div class="card p-4">
+          <h5>Add Blocked Slot</h5>
+          <form th:action="@{/doctor/schedule/block}" method="post">
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+            <div class="mb-3">
+              <label class="form-label">Date & Time</label>
+              <input type="datetime-local" name="datetime" class="form-control" required/>
+            </div>
+            <button class="btn btn-primary w-100">Add Block</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div th:replace="~{fragments/doctor :: scripts}"></div>
+
+</body>
+</html>

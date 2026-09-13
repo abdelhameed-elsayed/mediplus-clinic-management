@@ -1,0 +1,87 @@
+<!-- patient/appointments.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../assets/js/fragments/head.js" type="module"></script>
+    <script src="../assets/js/fragments/preloader.js" type="module"></script>
+    <script src="../assets/js/fragments/patient-header.js" type="module"></script>
+    <script src="../assets/js/fragments/footer.js" type="module"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <app-head data-page-title="Appointments"></app-head>
+</head>
+<body data-requires-login="true">
+<app-preloader></app-preloader>
+<app-header></app-header>
+
+<section class="py-5">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2><i class="icofont-ui-calendar"></i> Your Appointments</h2>
+            <a href="add-new-appointment.html" class="btn btn-outline-primary">
+                <i class="icofont-plus"></i> New Appointment
+            </a>
+        </div>
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <table class="table table-hover mb-0">
+                    <thead class="table-light">
+                    <tr>
+                        <th>Doctor</th>
+                        <th>Requested Time</th>
+                        <th>Status</th>
+                        <th class="text-end">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody id="apptBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>
+<script src="../assets/js/api/utils.js" async></script>
+<script src="../assets/js/api/patient/appointments.js" async></script>
+<!-- jquery Min JS -->
+<script src="../assets/js/vendor/jquery.min.js"></script>
+<!-- jquery Migrate JS -->
+<script src="../assets/js/vendor/jquery-migrate-3.0.0.js"></script>
+<!-- jquery Ui JS -->
+<script src="../assets/js/vendor/jquery-ui.min.js"></script>
+<!-- Easing JS -->
+<script src="../assets/js/vendor/easing.js"></script>
+<!-- Color JS -->
+<script src="../assets/js/vendor/colors.js"></script>
+<!-- Popper JS -->
+<script src="../assets/js/vendor/popper.min.js"></script>
+<!-- Bootstrap Datepicker JS -->
+<script src="../assets/js/vendor/bootstrap-datepicker.js"></script>
+<!-- Jquery Nav JS -->
+<script src="../assets/js/vendor/jquery.nav.js"></script>
+<!-- Slicknav JS -->
+<script src="../assets/js/vendor/slicknav.min.js"></script>
+<!-- ScrollUp JS -->
+<script src="../assets/js/vendor/jquery.scrollUp.min.js"></script>
+<!-- Niceselect JS -->
+<script src="../assets/js/vendor/niceselect.js"></script>
+<!-- Tilt Jquery JS -->
+<script src="../assets/js/vendor/tilt.jquery.min.js"></script>
+<!-- Owl Carousel JS -->
+<script src="../assets/js/vendor/owl-carousel.js"></script>
+<!-- counterup JS -->
+<script src="../assets/js/vendor/jquery.counterup.min.js"></script>
+<!-- Steller JS -->
+<script src="../assets/js/vendor/steller.js"></script>
+<!-- Wow JS -->
+<script src="../assets/js/vendor/wow.min.js"></script>
+<!-- Magnific Popup JS -->
+<script src="../assets/js/vendor/jquery.magnific-popup.min.js"></script>
+<!-- Counter Up CDN JS -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="../assets/js/vendor/bootstrap.min.js"></script>
+<!-- Main JS -->
+<script src="../assets/js/vendor/main.js"></script>
+</body>
+</html>

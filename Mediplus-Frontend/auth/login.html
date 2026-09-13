@@ -1,0 +1,78 @@
+<!-- auth/login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../assets/js/fragments/head.js" type="module" defer></script>
+    <script src="../assets/js/fragments/preloader.js" type="module" defer></script>
+    <script src="../assets/js/fragments/auth-header.js" type="module"></script>
+    <script src="../assets/js/fragments/footer.js" type="module"></script>
+    <script src="../assets/js/fragments/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <app-head data-page-title="Login"></app-head>
+</head>
+<body>
+<app-preloader></app-preloader>
+<app-header></app-header>
+
+<!-- Login Section -->
+<section class="appointment py-4 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <!-- Form -->
+            <div class="col-lg-6">
+                <div class="card shadow-sm">
+                    <div class="card-body p-5">
+                        <h2 class="card-title text-center mb-4">Sign In</h2>
+                        <form id="loginForm" novalidate>
+                            <!-- Username -->
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username</label>
+                                <input id="username" name="username" type="text"
+                                       class="form-control"
+                                       placeholder="Enter your username" required>
+                            </div>
+
+                            <!-- Password -->
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input id="password" name="password" type="password"
+                                       class="form-control"
+                                       placeholder="••••••••" required>
+                            </div>
+
+                            <!-- Remember / Forgot -->
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <div class="form-check">
+                                    <input id="remember" class="form-check-input" type="checkbox" name="remember-me">
+                                    <label class="form-check-label" for="remember">Remember me</label>
+                                </div>
+                                <a href="forgot-password.html" class="small">Forgot password?</a>
+                            </div>
+
+                            <!-- Submit -->
+                            <button type="submit" id="loginButton" class="btn btn-primary btn-lg w-100 mb-3 py-2">
+                                SIGN IN
+                            </button>
+
+                            <p class="text-center small mb-0">
+                                Don’t have an account?
+                                <a href="register.html">Sign up</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Illustration -->
+            <div class="col-lg-6 d-none d-lg-block">
+                <img src="../assets/img/contact-img.png" alt="Login Illustration" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>
+<app-scripts></app-scripts>
+<script src="../assets/js/api/utils.js" async></script>
+<script src="../assets/js/api/auth/login.js" async></script>
+</body>
+</html>

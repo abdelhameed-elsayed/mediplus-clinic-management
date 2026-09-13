@@ -1,0 +1,25 @@
+# IDE and editor files
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.classpath
+.project
+.settings/
+
+# Build output and local tools
+**/target/
+**/bin/
+.codex-temp-*/
+node_modules/
+
+# Local secrets and logs
+.env
+.env.*
+!.env.example
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
