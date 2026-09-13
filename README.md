@@ -6,7 +6,6 @@ Clinic management system built with Java, Spring Boot, Spring Security, and MySQ
 
 I developed the backend using Java, Spring Boot, Spring Security, and MySQL, and connected it to an existing open-source frontend. My work focuses on the REST API, application logic, database persistence, authentication, and integration with the user interface.
 
-The frontend design and assets are reused from the [MediPlus project](https://github.com/ahmadabdelbary2001/Mediplus-Spring-FullStack); credit for those resources belongs to their original authors.
 
 ## Backend Focus
 
