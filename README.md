@@ -6,16 +6,6 @@
 
 ---
 
-## 📋 Table of Contents
-1. [✨ Features](#-features)
-2. [🚀 Getting Started](#-getting-started)
-3. [📁 Project Structure](#-project-structure)
-4. [📸 Screenshots](#-screenshots)
-5. [📜 License](#-license)
-6. [🔗 Additional Resources](#-additional-resources)
-
----
-
 ## ✨ Features
 - **Patient Module**
   - Self-registration, login, and profile management.
@@ -48,13 +38,7 @@ To get started with the MediPlus Clinic Management System, you will need to set 
 - [**Backend Setup**](Mediplus-Backend/README.md)
 - [**Frontend Setup**]()
 
-<div align="center">
-  <a href="#-table-of-contents" style="text-decoration: none; border: 1px solid #ddd; border-radius: 5px; padding: 8px 16px; transition: background-color 0.3s;">
-    🔝 Back to Top
-  </a>
-</div>
 
----
 
 ## 📁 Project Structure
  ```
@@ -66,13 +50,7 @@ To get started with the MediPlus Clinic Management System, you will need to set 
 
 For a more detailed breakdown of the backend and frontend structures, please refer to their dedicated README files.
 
-<div align="center">
-  <a href="#-table-of-contents" style="text-decoration: none; border: 1px solid #ddd; border-radius: 5px; padding: 8px 16px; transition: background-color 0.3s;">
-    🔝 Back to Top
-  </a>
-</div>
 
----
 
 ## 📸 Screenshots
 
@@ -100,36 +78,4 @@ For a more detailed breakdown of the backend and frontend structures, please ref
 ### User Profile
 ![User Profile](Screenshots/profile.jpg)
 
-<div align="center">
-  <a href="#-table-of-contents" style="text-decoration: none; border: 1px solid #ddd; border-radius: 5px; padding: 8px 16px; transition: background-color 0.3s;">
-    🔝 Back to Top
-  </a>
-</div>
-
----
-
-## 📜 License
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/ahmadabdelbary2001/Mediplus-Spring-FullStack/blob/master/LICENSE) file for details.
-
-<div align="center">
-  <a href="#-table-of-contents" style="text-decoration: none; border: 1px solid #ddd; border-radius: 5px; padding: 8px 16px; transition: background-color 0.3s;">
-    🔝 Back to Top
-  </a>
-</div>
-
----
-
-## 🔗 Additional Resources
-- [Spring Boot Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/)
-- [Spring Data JPA Documentation](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)
-- [Spring Security Documentation](https://docs.spring.io/spring-security/site/docs/current/reference/html5/)
-- [MySQL Documentation](https://dev.mysql.com/doc/)
-
-<div align="center">
-  <a href="#-table-of-contents" style="text-decoration: none; border: 1px solid #ddd; border-radius: 5px; padding: 8px 16px; transition: background-color 0.3s;">
-    🔝 Back to Top
-  </a>
-</div>
-
-<p align="center"> Made with ❤️ by <a href="https://github.com/ahmadabdelbary2001">@Ahmad Abdelbary</a> </p>
 
