@@ -1,135 +1,98 @@
-# 🏥 **MediPlus Clinic Management System**
-> _A full-stack clinic management system built with Spring Boot (Java) for the backend and a static front-end using HTML, CSS, JavaScript, and jQuery. The application provides functionalities for three primary user roles: Patients, Doctors, and Administrators._
+﻿# MediPlus Clinic Management System
 
-## 📖 Overview
-> _MediPlus is designed to streamline clinic operations by providing a comprehensive platform for managing patient appointments, medical records, and administrative tasks. It offers distinct functionalities tailored to the roles of patients, doctors, and administrators, ensuring a secure and efficient healthcare management experience._
+A clinic management web application with a Java Spring Boot REST API and an HTML, CSS, and JavaScript frontend. The application includes patient registration, user authentication, and appointment management for patients, doctors, and administrators.
 
----
+## Tech Stack
 
-## 📋 Table of Contents
-1. [✨ Features](#-features)
-2. [🚀 Getting Started](#-getting-started)
-3. [📁 Project Structure](#-project-structure)
-4. [📸 Screenshots](#-screenshots)
-5. [📜 License](#-license)
-6. [🔗 Additional Resources](#-additional-resources)
+- Java 21 and Spring Boot 3.4.5
+- Spring Web, Spring Data JPA, and MySQL
+- Spring Security with session-based authentication
+- Jakarta Validation and Lombok
+- HTML, CSS, JavaScript, jQuery, and Bootstrap
+- Maven
 
----
+## Features
 
-## ✨ Features
-- **Patient Module**
-  - Self-registration, login, and profile management.
-  - Booking, viewing, editing, and canceling appointments with doctors.
-  - Viewing medical records and prescriptions.
-  - Receiving notifications when a doctor confirms or rejects an appointment.
-- **Doctor Module**
-  - Login and profile management.
-  - Viewing a list of patient appointments.
-  - Confirming or rejecting appointment requests.
-  - Managing personal schedule.
-  - Receiving notifications when a patient requests or modifies an appointment.
-- **Administrator Module**
-  - Managing all user accounts (doctors, patients, pharmacists, receptionists).
-  - Configuring medical departments and specializations.
-  - Generating statistical reports (e.g., number of patients, appointments, revenue).
-  - Viewing system logs and monitoring unauthorized access attempts.
+### Patients
 
-<div align="center">
-  <a href="#-table-of-contents" style="text-decoration: none; border: 1px solid #ddd; border-radius: 5px; padding: 8px 16px; transition: background-color 0.3s;">
-    🔝 Back to Top
-  </a>
-</div>
+- Register an account and log in.
+- View and update profile information.
+- Browse doctors and book appointments.
+- View, reschedule, and cancel appointments.
 
----
+### Doctors
 
-## 🚀 Getting Started
-To get started with the MediPlus Clinic Management System, you will need to set up both the backend and frontend components. Please refer to the respective README files for detailed instructions:
+- Log in and view profile information.
+- View appointment requests.
+- Confirm or decline appointments.
 
-- [**Backend Setup**](Mediplus-Backend/README.md)
-- [**Frontend Setup**]()
+### Administrators
 
-<div align="center">
-  <a href="#-table-of-contents" style="text-decoration: none; border: 1px solid #ddd; border-radius: 5px; padding: 8px 16px; transition: background-color 0.3s;">
-    🔝 Back to Top
-  </a>
-</div>
+- Access an administration dashboard.
+- Add and manage doctors through the frontend.
+- Manage patients and administrator accounts through the backend API.
 
----
+## Backend Structure
 
-## 📁 Project Structure
- ```
- Mediplus-Spring-FullStack/
-├── Mediplus-Backend/               # Spring Boot backend (Java)
-├── Mediplus-Frontend/              # Static HTML/CSS/JavaScript frontend
-└── Screenshots/                    # Project screenshots
- ```
+The backend is organized by feature: `user`, `patient`, `doctor`, `appointment`, and `admin`.
 
-For a more detailed breakdown of the backend and frontend structures, please refer to their dedicated README files.
+Each feature uses controllers for HTTP requests, services for application logic, repositories for persistence, and DTOs for request and response data. Shared configuration and exception handling are maintained separately.
 
-<div align="center">
-  <a href="#-table-of-contents" style="text-decoration: none; border: 1px solid #ddd; border-radius: 5px; padding: 8px 16px; transition: background-color 0.3s;">
-    🔝 Back to Top
-  </a>
-</div>
+```text
+mediplus-clinic-management/
+|-- Mediplus-Backend/
+|   |-- pom.xml
+|   `-- src/
+|       |-- main/java/org/mediplus/
+|       |-- main/resources/
+|       `-- test/java/org/mediplus/
+|-- Mediplus-Frontend/
+|   |-- admin/
+|   |-- auth/
+|   |-- doctor/
+|   |-- patient/
+|   `-- assets/
+`-- README.md
+```
 
----
+## Main API Routes
 
-## 📸 Screenshots
+| Route | Purpose |
+| --- | --- |
+| `/authenticate` | Session-based login |
+| `/api/users/me` | Current user information |
+| `/api/patients` | Patient management |
+| `/api/patients/register` | Patient registration |
+| `/api/doctors` | Doctor management |
+| `/api/appointments` | Appointment management |
+| `/api/appointments/{id}/status` | Appointment status updates |
+| `/api/admins` | Administrator management |
 
-### Home Page
-![Home Page](Screenshots/index.jpg)
+## Running Locally
 
-### Admin Dashboard
-![Admin Dashboard](Screenshots/admin.jpg)
+1. Install JDK 21 and MySQL.
+2. Create a MySQL database named `mediplus-db`.
+3. Configure the datasource settings in `Mediplus-Backend/src/main/resources/application-dev.properties` for your local database.
+4. From `Mediplus-Backend`, start the backend:
 
-### Doctor Dashboard
-![Doctor Dashboard](Screenshots/doctor.jpg)
+   ```powershell
+   .\mvnw.cmd spring-boot:run
+   ```
 
-### Patient Dashboard
-![Patient Dashboard](Screenshots/patient.jpg)
+   On Linux or macOS:
 
-### Add Appointment
-![Add Appointment](Screenshots/add-appointment.jpg)
+   ```sh
+   sh mvnw spring-boot:run
+   ```
 
-### Doctor Appointment View
-![Doctor Appointment View](Screenshots/appo-doc.jpg)
+5. Serve `Mediplus-Frontend` using a static web server, such as Live Server, at `http://127.0.0.1:5500` and open `index.html`.
 
-### Patient Appointment View
-![Patient Appointment View](Screenshots/patient-appo.jpg)
+The active development profile runs the backend on port `8080`. The current Hibernate configuration uses `ddl-auto=create`, which recreates the schema when the application starts. `DataInitializer` creates demo patient, doctor, and administrator accounts when they do not exist.
 
-### User Profile
-![User Profile](Screenshots/profile.jpg)
+## Tests
 
-<div align="center">
-  <a href="#-table-of-contents" style="text-decoration: none; border: 1px solid #ddd; border-radius: 5px; padding: 8px 16px; transition: background-color 0.3s;">
-    🔝 Back to Top
-  </a>
-</div>
+The backend includes controller tests and an application context test. Run the test suite from `Mediplus-Backend`:
 
----
-
-## 📜 License
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/ahmadabdelbary2001/Mediplus-Spring-FullStack/blob/master/LICENSE) file for details.
-
-<div align="center">
-  <a href="#-table-of-contents" style="text-decoration: none; border: 1px solid #ddd; border-radius: 5px; padding: 8px 16px; transition: background-color 0.3s;">
-    🔝 Back to Top
-  </a>
-</div>
-
----
-
-## 🔗 Additional Resources
-- [Spring Boot Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/)
-- [Spring Data JPA Documentation](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)
-- [Spring Security Documentation](https://docs.spring.io/spring-security/site/docs/current/reference/html5/)
-- [MySQL Documentation](https://dev.mysql.com/doc/)
-
-<div align="center">
-  <a href="#-table-of-contents" style="text-decoration: none; border: 1px solid #ddd; border-radius: 5px; padding: 8px 16px; transition: background-color 0.3s;">
-    🔝 Back to Top
-  </a>
-</div>
-
-<p align="center"> Made with ❤️ by <a href="https://github.com/ahmadabdelbary2001">@Ahmad Abdelbary</a> </p>
-
+```powershell
+.\mvnw.cmd test
+```
