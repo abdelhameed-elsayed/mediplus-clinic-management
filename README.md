@@ -1,6 +1,21 @@
 ﻿# MediPlus Clinic Management System
 
-A clinic management web application with a Java Spring Boot REST API and an HTML, CSS, and JavaScript frontend. The application includes patient registration, user authentication, and appointment management for patients, doctors, and administrators.
+Clinic management system built with Java, Spring Boot, Spring Security, and MySQL and integrated with an open-source frontend.
+
+## Project Background
+
+I developed the backend using Java, Spring Boot, Spring Security, and MySQL, and connected it to an existing open-source frontend. My work focuses on the REST API, application logic, database persistence, authentication, and integration with the user interface.
+
+The frontend design and assets are reused from the [MediPlus project](https://github.com/ahmadabdelbary2001/Mediplus-Spring-FullStack); credit for those resources belongs to their original authors.
+
+## Backend Focus
+
+- REST endpoints for patients, doctors, administrators, and appointments.
+- Application logic organized into controllers, services, and repositories.
+- Database persistence using Spring Data JPA and MySQL.
+- Authentication and role-based access rules using Spring Security.
+- Request validation, DTOs, and centralized exception handling.
+- Integration with the frontend through JSON API requests.
 
 ## Tech Stack
 
