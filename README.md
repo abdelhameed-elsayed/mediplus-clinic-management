@@ -1,4 +1,4 @@
-﻿# MediPlus Clinic Management System
+# Clinic Management System
 
 Clinic management system built with Java, Spring Boot, Spring Security, and MySQL and integrated with an open-source frontend.
 

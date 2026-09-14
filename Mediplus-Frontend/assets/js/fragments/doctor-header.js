@@ -29,7 +29,7 @@ class AppHeader extends HTMLElement {
                 <div class="col-lg-3 col-md-3 col-6">
                   <div class="logo">
                     <a href="../index.html">
-                      <img src="../assets/img/logo.png" alt="MediPlus">
+                      <span class="clinic-brand">Clinic Management System</span>
                     </a>
                   </div>
                   <div class="mobile-nav"></div>

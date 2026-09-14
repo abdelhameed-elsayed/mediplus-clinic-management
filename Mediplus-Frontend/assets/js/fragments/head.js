@@ -12,7 +12,7 @@ class AppHead extends HTMLElement {
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Title -->
-<title>MEDIPLUS | ${title}</title>
+<title>Clinic Management System | ${title}</title>
 
 <!-- Favicon -->
 <link rel="icon" href="../assets/img/favicon.png">

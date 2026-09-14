@@ -7,7 +7,7 @@ class AppHeader extends HTMLElement {
     <div class="header-inner">
         <div class="container d-flex justify-content-between align-items-center pb-3">
             <div class="logo">
-                <a href="../index.html"><img src="../assets/img/logo.png" alt="MEDIPLUS"></a>
+                <a href="../index.html"><span class="clinic-brand">Clinic Management System</span></a>
             </div>
             <div class="get-quote">
                 <a href="/contact-us" class="btn">CONTACT US</a>

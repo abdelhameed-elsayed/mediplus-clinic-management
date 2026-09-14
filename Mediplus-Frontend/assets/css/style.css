@@ -4177,3 +4177,12 @@ body{
 /*=========================
 	End Footer CSS
 ===========================*/
+/* Project brand */
+.header .logo .clinic-brand {
+  display: inline-block;
+  max-width: 240px;
+  color: #1a76d1;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.25;
+}

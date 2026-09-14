@@ -13,7 +13,7 @@ class AppHeader extends HTMLElement {
                     <div class="col-lg-3 col-md-3 col-12">
                         <!-- Start Logo -->
                         <div class="logo">
-                            <a href="#"><img src="./assets/img/logo.png" alt="#"></a>
+                            <a href="#"><span class="clinic-brand">Clinic Management System</span></a>
                         </div>
                         <!-- End Logo -->
                     </div>

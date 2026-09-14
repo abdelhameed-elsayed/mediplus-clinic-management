@@ -1,7 +1,7 @@
-# 🛠️ **💻 Mediplus-Backend**
+# 🛠️ **💻 Clinic Management System Backend**
 
 ## 📖 Overview
-> _This directory contains the Spring Boot backend for the MediPlus Clinic Management System. It provides the core logic for user management, appointment scheduling, medical records, and administrative functionalities._
+> _This directory contains the Spring Boot backend for the Clinic Management System. It provides the core logic for user management, appointment scheduling, medical records, and administrative functionalities._
 
 ---
 
